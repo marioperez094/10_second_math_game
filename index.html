@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MathXplosion</title>
+
+
+
+  <!--Links-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="./style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/e067495424.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+</head>
+<body>
+  <div class="container-fluid game-screen">
+    <div class="row">
+      
+      <div class="col-12 text-center game-title">
+        <h1>Welcome to <span class="title">MathXplosion</span></h1>
+      </div>
+      <div class="col-12 bomb-menu text-center">
+        <div class="bomb">
+          <div id="fuse"></div>
+          <div id="bomb-stub"></div>
+          <div id="bomb-circle">
+            <div id="bomb-square">
+              <div id="timer">10</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="menu">
+          <input type="number" placeholder="Click Me" />
+          <div class="signs-list">
+            <input type="checkbox"/><span>+</span>
+            <input type="checkbox" /><span>-</span>
+            <input type="checkbox" /><span>×</span>
+            <input type="checkbox" /><span>÷</span>
+            <div class="number-slider">
+              <input type="range" min="10" max="100" value="10" />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-3 score-tracker">
+        <h3 class="text-center">Best Round</h3>
+        <h5>Best Streak: <span class="best-round-wins"></span></h5>
+        <h5>Highest Combo: <span class="best-round-combo"></span></h5>
+        <h5>Best Totla Time: <span class="best-round-time"></span></h5>
+      </div>
+      
+      <div class="col-6">
+      </div>
+      
+      <div class="col-3">
+        <h3 class="text-center">Current Round</h3>
+        <h5 class="text-end">Current Streak: <span class="best-round-wins"></span></h5>
+        <h5 class="text-end">Current Combo: <span class="best-round-combo"></span></h5>
+        <h5 class="text-end">Current Time: <span class="best-round-time"></span></h5>
+      </div>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+  
+</body>
+</html>

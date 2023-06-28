@@ -1,3 +1,137 @@
+body {
+  background-color: greenyellow;
+}
+
 #timer, .title {
   font-family: "Orbitron", Arial, Helvetica, sans-serif;
+}
+
+.game-title {
+  padding-top: 5px;
+  font-size: 55px;
+}
+
+#timer {
+  color: red;
+}
+
+.small-bomb, .small-stub, .small-fuse, #bomb-circle, #bomb-stub {
+  background-color: black;
+ 
+}
+
+.small-bomb, #bomb-circle {
+  border-radius: 100%;
+}
+
+.small-bomb, .small-stub {
+  display: inline-block;
+}
+
+.small-stub, #bomb-stub {
+  border-radius: 5px;
+}
+
+.small-stub {
+  width: 16px;
+  height: 25px;
+  margin-right: -20px;
+
+}
+
+.small-bomb {
+  font-size: 40px;
+  width: 55px;
+  height: 55px;
+}
+
+#bomb-circle {
+  height: 500px;
+  width: 500px;
+
+}
+
+#bomb-stub {
+  height: 50px;
+  width: 150px;
+  margin-left: 175px;
+  margin-bottom: -25px;
+}
+
+#fuse {
+  width: 50px;
+  height: 100px;
+  background-color: #b9a379;
+  margin-left: 225px;
+  margin-bottom: -150px;
+}
+
+.flame {
+  width: 50px;
+  height: 100px;
+  background-color: orange;
+  border: 10px solid red;
+}
+
+.top-right {
+  transform: rotate(45deg);
+}
+
+.top-left {
+  transform: rotate(-45deg);
+  margin-top: -100px;
+  
+}
+
+.rotate-flame-left {
+  animation-name: rotate-flame-left;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.rotate-flame-right {
+  animation-name: rotate-flame-right;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.flames {
+  margin-left: 225px;
+}
+
+@keyframes rotate-flame-right {
+  25% { transform: rotate(0deg); }
+  50% { transform: rotate(45deg); }
+  75% { transform: rotate(90deg); }
+}
+
+@keyframes rotate-flame-left {
+  25% { transform: rotate(-90deg); }
+  50% { transform: rotate(-45deg); }
+  75% { transform: rotate(0deg); }
+}
+
+#bomb-square {
+  width: 100%;
+  height: 100px;
+  border: 20px solid rgb(54, 54, 54);
+  display:block;
+}
+
+.menu {
+  display: block;
+}
+
+.answer {
+  width: 100%;
+  height: 50px;
+}
+
+.math-box {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+#timer {
+  font-size: 60px;
 }

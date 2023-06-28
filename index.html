@@ -19,29 +19,42 @@
   <div class="container-fluid game-screen">
     <div class="row">
       
-      <div class="col-12 text-center game-title">
-        <h1>Welcome to <span class="title">MathXplosion</span></h1>
+      <div class="col-12 text-center game-title d-flex justify-content-center mb-5">
+        <h1>
+          Math
+          <div class="small-stub"></div>
+          <div class="small-bomb text-white">X</div>
+          plosion
+        </h1>
       </div>
-      <div class="col-12 bomb-menu text-center">
+      <div class="col-12 bomb-div d-flex justify-content-center">
         <div class="bomb">
           <div id="fuse"></div>
-          <div id="bomb-stub"></div>
-          <div id="bomb-circle">
-            <div id="bomb-square">
-              <div id="timer">10</div>
-            </div>
+          <div class="flames">
+            <div class="flame top-right"></div>
+            <div class="flame top-left"></div>
           </div>
-        </div>
-        
-        <div class="menu">
-          <input type="number" placeholder="Click Me" />
-          <div class="signs-list">
-            <input type="checkbox"/><span>+</span>
-            <input type="checkbox" /><span>-</span>
-            <input type="checkbox" /><span>×</span>
-            <input type="checkbox" /><span>÷</span>
-            <div class="number-slider">
-              <input type="range" min="10" max="100" value="10" />
+          <div class="bomb-body">
+            <div id="bomb-stub"></div>
+            <div class="d-flex align-items-center justify-content-center text-center" id="bomb-circle">
+              <div class="row">
+                <div class="d-flex align-items-center justify-content-center text-center col-12 w-100" id="bomb-square">
+                  <div id="timer">10</div>
+                </div>
+                <div class="menu col-12 text-white mt-5">
+                  <h2 id="equation"></h2>
+                  <input type="number" placeholder="Click Me" class="answer"/>
+                  <div class="signs-list">
+                    <input type="checkbox" class="math-box"/><span>+</span>
+                    <input type="checkbox" class="math-box"/><span>-</span>
+                    <input type="checkbox" class="math-box"/><span>×</span>
+                    <input type="checkbox" class="math-box"/><span>÷</span>
+                    <div class="number-slider">
+                      <input type="range" min="10" max="100" value="10" />
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -51,7 +64,7 @@
         <h3 class="text-center">Best Round</h3>
         <h5>Best Streak: <span class="best-round-wins"></span></h5>
         <h5>Highest Combo: <span class="best-round-combo"></span></h5>
-        <h5>Best Totla Time: <span class="best-round-time"></span></h5>
+        <h5>Best Total Time: <span class="best-round-time"></span></h5>
       </div>
       
       <div class="col-6">

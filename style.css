@@ -45,10 +45,14 @@ body {
   height: 55px;
 }
 
+.bomb-div {
+  min-height: 600px;
+  max-height: 600px;
+}
+
 #bomb-circle {
   height: 500px;
   width: 500px;
-
 }
 
 #bomb-stub {
@@ -63,7 +67,7 @@ body {
   height: 100px;
   background-color: #b9a379;
   margin-left: 225px;
-  margin-bottom: -150px;
+  margin-bottom: -25px;
 }
 
 .flame {
@@ -83,6 +87,10 @@ body {
   
 }
 
+.flames {
+  margin-top: -650px;
+}
+
 .rotate-flame-left {
   animation-name: rotate-flame-left;
   animation-duration: 2s;
@@ -95,8 +103,15 @@ body {
   animation-iteration-count: infinite;
 }
 
+
 .flames {
   margin-left: 225px;
+ 
+}
+
+.lower-flame {
+  animation-name: lower-flame;
+  animation-duration: 5s;
 }
 
 @keyframes rotate-flame-right {
@@ -109,6 +124,10 @@ body {
   25% { transform: rotate(-90deg); }
   50% { transform: rotate(-45deg); }
   75% { transform: rotate(0deg); }
+}
+
+@keyframes lower-flame {
+  100%{ margin-top: -575px; }
 }
 
 #bomb-square {
@@ -134,4 +153,19 @@ body {
 
 #timer {
   font-size: 60px;
+}
+
+.main-explosion { 
+  font-size: 400px;
+  animation-name: main-explode;
+  animation-duration: 1s;
+}
+
+@keyframes main-explode {
+  0% { font-size: 50px; }
+  100% { font-size: 400px;}
+}
+
+.player-name {
+  margin-top: -250px;
 }

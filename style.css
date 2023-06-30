@@ -2,7 +2,8 @@ body {
   background-color: greenyellow;
 }
 
-#timer, .title {
+#timer,
+.title {
   font-family: "Orbitron", Arial, Helvetica, sans-serif;
 }
 
@@ -15,20 +16,27 @@ body {
   color: red;
 }
 
-.small-bomb, .small-stub, .small-fuse, #bomb-circle, #bomb-stub {
+.small-bomb,
+.small-stub,
+.small-fuse,
+#bomb-circle,
+#bomb-stub {
   background-color: black;
- 
+
 }
 
-.small-bomb, #bomb-circle {
+.small-bomb,
+#bomb-circle {
   border-radius: 100%;
 }
 
-.small-bomb, .small-stub {
+.small-bomb,
+.small-stub {
   display: inline-block;
 }
 
-.small-stub, #bomb-stub {
+.small-stub,
+#bomb-stub {
   border-radius: 5px;
 }
 
@@ -45,10 +53,14 @@ body {
   height: 55px;
 }
 
+.bomb-div {
+  min-height: 600px;
+  max-height: 600px;
+}
+
 #bomb-circle {
   height: 500px;
   width: 500px;
-
 }
 
 #bomb-stub {
@@ -63,8 +75,21 @@ body {
   height: 100px;
   background-color: #b9a379;
   margin-left: 225px;
-  margin-bottom: -150px;
+  margin-bottom: -25px;
 }
+
+.fuse-decrease-size {
+  animation-name: fuse-decrease-size;
+  animation-duration: 10s;
+}
+
+@keyframes fuse-decrease-size {
+  100% { height: 50px;
+    margin-top: 50px;
+  }  
+}
+
+
 
 .flame {
   width: 50px;
@@ -80,7 +105,11 @@ body {
 .top-left {
   transform: rotate(-45deg);
   margin-top: -100px;
-  
+
+}
+
+.flames {
+  margin-top: -650px;
 }
 
 .rotate-flame-left {
@@ -95,27 +124,56 @@ body {
   animation-iteration-count: infinite;
 }
 
+
 .flames {
   margin-left: 225px;
+
+}
+
+.lower-flame {
+  animation-name: lower-flame;
+  animation-duration: 20s;
 }
 
 @keyframes rotate-flame-right {
-  25% { transform: rotate(0deg); }
-  50% { transform: rotate(45deg); }
-  75% { transform: rotate(90deg); }
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(45deg);
+  }
+
+  75% {
+    transform: rotate(90deg);
+  }
 }
 
 @keyframes rotate-flame-left {
-  25% { transform: rotate(-90deg); }
-  50% { transform: rotate(-45deg); }
-  75% { transform: rotate(0deg); }
+  25% {
+    transform: rotate(-90deg);
+  }
+
+  50% {
+    transform: rotate(-45deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes lower-flame {
+  100% {
+    margin-top: -600px;
+  }
 }
 
 #bomb-square {
   width: 100%;
   height: 100px;
   border: 20px solid rgb(54, 54, 54);
-  display:block;
+  display: block;
 }
 
 .menu {
@@ -134,4 +192,29 @@ body {
 
 #timer {
   font-size: 60px;
+}
+
+.main-explosion {
+  font-size: 400px;
+  animation-name: main-explode;
+  animation-duration: 1s;
+}
+
+@keyframes main-explode {
+  0% {
+    font-size: 50px;
+  }
+
+  100% {
+    font-size: 400px;
+  }
+}
+
+.player-name {
+  margin-top: -250px;
+}
+
+.btn-danger {
+  background-color: #c44d0e;
+  border: transparent;
 }

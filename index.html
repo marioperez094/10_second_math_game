@@ -29,16 +29,15 @@
         </h1>
       </div>
 
-      <div class="col-3 d-flex align-items-center">
+      <div class="col-6 col-lg-3 order-3 order-lg-1 d-flex align-items-center">
         <span>
           <h3 class="text-center mb-4">Current Round</h3>
           <h5>Current Streak: <span class="current-round-wins"></span></h5>
-          <h5>Current Combo: <span class="current-round-combo"></span></h5>
-          <h5>Current Time: <span class="current-round-time"></span></h5>
+          </span>
         </span>
       </div>
 
-      <div class="col-6 bomb-div d-flex justify-content-center">
+      <div class="col-12 col-lg-6 order-1 order-lg-2 bomb-div d-flex justify-content-center">
         <div class="bomb">
           <div id="fuse"></div>
           <div class="bomb-body">
@@ -52,12 +51,13 @@
                   <h2 id="equation"></h2>
                   <input type="number" placeholder="Click Me" class="answer" />
                   <div class="signs-list">
-                    <input type="checkbox" class="math-box" checked/><span>+</span>
-                    <input type="checkbox" class="math-box" /><span>-</span>
-                    <input type="checkbox" class="math-box" /><span>×</span>
-                    <input type="checkbox" class="math-box" /><span>÷</span>
-                    <div class="number-slider">
-                      <input type="range" min="10" max="100" value="10" />
+                    <input type="checkbox" class="math-box add" checked/><span>+</span>
+                    <input type="checkbox" class="math-box subtract" /><span>-</span>
+                    <input type="checkbox" class="math-box multiply" /><span>×</span>
+                    <input type="checkbox" class="math-box divide" /><span>÷</span>
+                    <div>
+                      <input class="number-slider" type="range" min="10" max="100" value="10" />
+                      <h5 class="slider-text">10</h5>
                     </div>
                   </div>
                 </div>
@@ -71,24 +71,23 @@
         </div>
       </div>
 
-      <div class="col-6 explosion-div d-flex justify-content-center align-items-center d-none">
-        <div>
-          <div class="explosion">
+      <div class="col-12 col-lg-6 order-2 order-lg-3 explosion-div d-flex justify-content-center align-items-center d-none">
+        <div class="h-100">
+          <div class="explosion h-100">
             <i class="fa-sharp fa-solid fa-burst main-explosion" style="color: #c44d0e;"></i>
           </div>
-          <div class="player-name text-center justify-content-center">
+          <div class="player-name text-center justify-content-center h-100">
             <button class="btn btn-danger d-none">Replay?</button>
           </div>
         </div>
       </div>
 
 
-      <div class="col-3 d-flex align-items-center">
+      <div class="col-6 col-lg-3 order-4 order-lg-4 d-flex align-items-center">
         <span>
           <h3 class="text-center mb-4">Best Round</h3>
-          <h5 class="text-end">Best Streak: <span class="current-round-wins"></span></h5>
-          <h5 class="text-end">Best Combo: <span class="current-round-combo"></span></h5>
-          <h5 class="text-end">Best Time: <span class="current-round-time"></span></h5>
+          <h5 class="text-end">Best Streak: <span class="best-round-wins"></span></h5>
+          <h5 class="text-end">Best Time: <span class="best-round-time"></span></h5>
         </span>
       </div>
 

@@ -15,13 +15,13 @@ var startGame = function () {
   var subtract = $('.subtract').is(':checked');
   var multiply = $('.multiply').is(':checked');
   var divide = $('.divide').is(':checked');
-  
+
   if (add === true) { operations.push(1) };
   if (subtract === true) { operations.push(2) };
   if (multiply === true) { operations.push(3) };
   if (divide === true) { operations.push(4) };
 
-  if (operations.length < 1) { return alert ('Please select an operation.') }
+  if (operations.length < 1) { return alert('Please select an operation.') }
 
   $('.answer').off('click', startGame);
   $('.signs-list').addClass('d-none');
@@ -31,25 +31,28 @@ var startGame = function () {
 };
 
 var randomNumber = function (multiple) {
-  return Math.ceil(Math.random() * multiple);
+  return Math.round(Math.random() * multiple);
 };
 
 var randomQuestion = function () {
   var question = {}
   var multiple = $('.number-slider').val()
-  
+
   var num1 = randomNumber(multiple);
   var num2 = randomNumber(multiple);
   var sign = operations[randomNumber(operations.length - 1)];
 
+  console.log(operations)
+  console.log(operations.length)
+  console.log(sign)
   switch (sign) {
     case 1:
       question.solved = num1 + num2
-      question.equation = num1 + ' + ' + num2 + ' =' 
+      question.equation = num1 + ' + ' + num2 + ' ='
       break;
     case 2:
       question.solved = num1 - num2
-      question.equation = num1 + ' - ' + num2 + ' =' 
+      question.equation = num1 + ' - ' + num2 + ' ='
       if (question.solved < 0) {
         randomQuestion(operations);
         return;
@@ -57,14 +60,14 @@ var randomQuestion = function () {
       break;
     case 3:
       question.solved = num1 * num2
-      question.equation = num1 + ' × ' + num2 + ' =' 
+      question.equation = num1 + ' × ' + num2 + ' ='
       break;
     case 4:
       question.solved = num1 / num2
       question.equation = num1 + ' ÷ ' + num2 + ' ='
-      if (question.solved % 1 !== 0) { 
+      if (question.solved % 1 !== 0) {
         randomQuestion(operations)
-        return; 
+        return;
       }
       break;
   }
@@ -90,7 +93,7 @@ var checkAnswer = function () {
     $('.answer').val('');
 
     var addAnimation = currentAnimation + 2
-    
+
     $('.lower-flame').css('animation-duration', addAnimation + 's')
     $('.fuse-decrease-size').css('animation-duration', addAnimation + 's')
 
@@ -129,7 +132,7 @@ var animationFunction = function (startStop) {
 }
 
 var bgChanges = function (currentTime) {
-  if(currentTime === 5) {
+  if (currentTime === 5) {
     $('body').css('background-color', 'coral')
   }
   else if (currentTime === 2) {
@@ -141,7 +144,7 @@ var endGame = function () {
   $('.answer').val('');
   $('.explosion-div').removeClass('d-none');
   $('.bomb-div').addClass('d-none');
-  setTimeout( function() { $('.btn-danger').removeClass('d-none') }, 2000);
+  setTimeout(function () { $('.btn-danger').removeClass('d-none') }, 2000);
 
   newBest();
 }
@@ -156,9 +159,9 @@ var newBest = function () {
   $('.best-round-time').html(bestScore.time);
 }
 
-var resetGame = function() {
+var resetGame = function () {
   currentScore.score = 0;
-  currentScore.time =0;
+  currentScore.time = 0;
   timeAlloted = 10;
   $('.current-round-wins').html(currentScore.score);
   operations = operations.slice(operations.length);
@@ -178,14 +181,14 @@ var resetGame = function() {
 
 $('.answer').on('click', startGame);
 
-$('.answer').on('input', function() {
+$('.answer').on('input', function () {
   checkAnswer();
 });
 
-$(document).on('click', '.btn-danger', function() {
+$(document).on('click', '.btn-danger', function () {
   resetGame();
 });
 
-$('.number-slider').on('change', function() {
+$('.number-slider').on('change', function () {
   $('.slider-text').html($('.number-slider').val())
 })
